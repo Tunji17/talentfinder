@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "1deef575-1f16-4c50-bed7-1fee2cd25fbd",
+		"name": "Talent finder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Tunji",
+							"type": "text"
+						},
+						{
+							"key": "skills",
+							"value": "[ \"javascript\",\"express\", \"elixir\",  \"mongodb\",\"go\"]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/candidate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Candiate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/candidates/search?skills=javascript,express,mongodb",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"candidates",
+						"search"
+					],
+					"query": [
+						{
+							"key": "skills",
+							"value": "javascript,express,mongodb"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

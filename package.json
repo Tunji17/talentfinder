@@ -1,0 +1,44 @@
+{
+  "name": "talentfinder",
+  "version": "1.0.0",
+  "description": "find a talent that match your specifications",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "cross-env NODE_ENV=test mocha --exit --timeout 10000 ./lib/__test__/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Tunji17/talentfinder.git"
+  },
+  "keywords": [
+    "talent",
+    "tech"
+  ],
+  "author": "tunji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tunji17/talentfinder/issues"
+  },
+  "homepage": "https://github.com/Tunji17/talentfinder#readme",
+  "dependencies": {
+    "@hapi/boom": "^8.0.1",
+    "@hapi/joi": "^15.0.3",
+    "bunyan": "^1.8.12",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "objectmodel": "^3.7.7",
+    "underscore": "^1.9.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^6.0.3"
+  }
+}
